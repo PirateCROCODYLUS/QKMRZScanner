@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension CIImage {
+public extension CIImage {
     var averageLuminance: Double {
         let vector = CIVector(cgRect: extent)
         let filter = CIFilter(name: "CIAreaAverage", parameters: [kCIInputImageKey: self, kCIInputExtentKey: vector])!
